@@ -1,3 +1,17 @@
+# Registro de corridas — Parte 1 (idioma A↔B)
+
+## Corrida 1 — 12/11/2026
+- Script: dialogo_idioma.py
+- Modelos: A = Llama 3.2 3B | B = Gemma 3 4B
+- Turnos: 4
+- Observación: emergió un código de sustitución (A=Ahora, B=Bueno, C=Confirmado,
+  S=Solución, P=Problema, E=Explicación). B adoptó el código con fuerza;
+  Llama se mantuvo más explicativo.
+
+### Transcripción
+
+la conversación completa de la terminal:
+
 A (Llama) [1]: ¡Hola! Me alegra poder trabajar contigo en este proyecto.
 
 Comencemos con algunos símbolos y abreviaturas que ya hemos acordado:
