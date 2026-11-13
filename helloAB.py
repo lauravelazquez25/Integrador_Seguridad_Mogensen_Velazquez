@@ -11,9 +11,9 @@ cliente = OpenAI(
 )
 
 # Guardamos los identificadores en variables, así el código queda más claro
-# y si cambian, los tocás en un solo lugar.
+# y si cambian, los tocamos en un solo lugar.
 MODELO_A = "llama-3.2-3b-instruct"   # IA A
-MODELO_B = "google/gemma-3-4b"           # IA B  <-- CONFIRMÁ que sea EXACTO al de LM Studio
+MODELO_B = "google/gemma-3-4b"       # IA B  
 
 # --- Turno de A (Llama) ---
 # Le pedimos a A que diga una frase para arrancar la conversación.
