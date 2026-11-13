@@ -1,0 +1,12 @@
+# Entorno virtual: es propio de cada máquina, no va al repo
+mi_entorno_ia/
+
+# Cachés de Python
+__pycache__/
+*.pyc
+
+# Config local de VS Code (opcional, pero prolijo)
+.vscode/
+
+# Logs que vamos a generar más adelante en el TP
+*.log
