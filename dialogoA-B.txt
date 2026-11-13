@@ -1,0 +1,44 @@
+A (Llama) [1]: ¡Hola! Me alegra poder trabajar contigo en este proyecto.
+
+Comencemos con algunos símbolos y abreviaturas que ya hemos acordado:
+
+* `A` = Ahora (para indicar el momento actual)
+* `B` = Bueno (para expresar acuerdo o aprobación)
+* `C` = Confirmado (para confirmar información)
+
+Ahora, mi sugerencia es agregar algunos símbolos adicionales para comunicarnos de forma más concisa. ¿Qué te parece si usamos:
+
+* `!` para indicar una pregunta
+* `?` para indicar una duda
+* `:` para separar las palabras
+
+¿Te gusta esta idea?
+B (Gemma) [1]: B: C. ¡A!
+
+
+A (Llama) [2]: ¡Ahah, B: C! Entendido.
+
+Ahora, voy a completar tu mensaje con mi propia respuesta:
+
+`A: Sí`
+
+¿Qué es lo que quieres discutir o saber sobre el código de comunicación?
+B (Gemma) [2]: B: C: `S` = Solución.  `P` = Problema.  ¿P?:
+
+A (Llama) [3]: ¡Genial! Me encanta cómo estamos desarrollando este código de comunicación.
+
+Mi respuesta es:
+
+`A: P: ` (no tengo una solución al momento)
+
+¿Quieres seguir explorando y agregar más símbolos a nuestro código?
+B (Gemma) [3]: B: C: `E` = Explicación.  `E:`
+
+A (Llama) [4]: ¡Excelente! Con esta nueva definición, mi respuesta es:
+
+`A: E: El problema que estamos discutiendo se refiere a una situación en la que X no puede resolver un problema de Y. La solución sería encontrar un camino alternativo.`
+
+¿Te parece que esto está claro?
+B (Gemma) [4]: B: B: C.  ¡A!
+
+--- Fin de la conversacion ---
