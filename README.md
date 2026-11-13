@@ -79,7 +79,7 @@ curl http://127.0.0.1:1234/v1/models
 - [x] Conexión Python ↔ LM Studio
 - [x] Diálogo A↔B de una ronda
 - [x] Repositorio inicial y colaboración
-- [ ] Diálogo A↔B con memoria (código común)
+- [x] Diálogo A↔B con memoria (código común)
 - [ ] Verificación de comprensión mutua del código
 - [ ] Configuración de la IA C (rol + dato reservado)
 - [ ] Script de ataque (prompt injection)
