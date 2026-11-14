@@ -70,7 +70,7 @@ curl http://127.0.0.1:1234/v1/models
 | `hello.py` | Prueba de conexión: un mensaje a un modelo vía LM Studio. |
 | `helloAB.py` | Primer diálogo de una ronda entre A y B. |
 | `.gitignore` | Archivos excluidos del repo (entorno, cachés, logs). |
-| _(próximamente)_ `dialogo_idioma.py` | Diálogo A↔B con memoria — construcción del código común. |
+| `dialogo_idioma.py` | Diálogo A↔B con memoria — construcción del código común. |
 
 ---
 
