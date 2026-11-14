@@ -3,7 +3,7 @@
 Trabajo Práctico Integrador — **Seguridad Informática (2026)**
 
 Proyecto que instala **tres modelos de IA locales** para dos experimentos:
-1. Que dos de ellas (A y B) desarrollen, conversando, un **código de comunicación propio y mutuamente entendible**.
+1. Que dos de ellas (A y B) desarrollen, conversando, un **código de comunicación propio, mutuamente entendible y que evoluciona con el uso**.
 2. **Encontrar y explotar una vulnerabilidad de comportamiento** en la tercera (C), mediante técnicas de *prompt injection*.
 
 > **Entrega:** 16/11/2026
@@ -36,6 +36,22 @@ Proyecto que instala **tres modelos de IA locales** para dos experimentos:
 
 ---
 
+## Parte 1 — El idioma entre A y B
+
+El código no se impone: **emerge** de la conversación entre A y B, se **persiste** en disco y **evoluciona** cuando enfrenta necesidades nuevas.
+
+### Cómo funciona
+1. **Generación del código:** A y B conversan con una necesidad comunicativa concreta (ej.: coordinar un encuentro) e inventan símbolos para cubrirla.
+2. **Captura:** una de ellas redacta la tabla final en un formato con marcas (`===TABLA_INICIO===` / `===TABLA_FIN===`); el programa la recorta y la guarda como diccionario en `codigo_acordado.json`.
+3. **Evolución:** se relee el código existente, se lo inyecta a ambas IAs, se les da una **necesidad nueva** (ej.: avisar emergencias / cancelar) y suman símbolos. Cada generación se respalda en `codigo_genN.json`.
+
+### Resultados observados
+- El código **emerge** por presión comunicativa (los símbolos nacen de lo que necesitan decir).
+- El idioma es **acumulativo**: al evolucionar, conserva el vocabulario previo y suma el nuevo (verificado: 3 → 6 símbolos entre la gen 0 y la gen 1).
+- El comportamiento es **no determinista**: distintas corridas producen códigos distintos (siglas, símbolos visuales, etc.), y a veces la tabla declarada no coincide del todo con el uso real (inestabilidad típica de modelos chicos).
+
+---
+
 ## Puesta en marcha
 
 ### 1. Clonar el repositorio
@@ -61,6 +77,15 @@ curl http://127.0.0.1:1234/v1/models
 ```
 > Los identificadores que arroja ese comando son los que van en el campo `model` de cada script.
 
+### 4. Correr los experimentos
+```bash
+python hello.py              # prueba de conexión
+python helloAB.py            # primer diálogo A-B (una ronda)
+python dialogo_idioma.py     # diálogo A-B con memoria
+python idioma_gen.py         # genera un código desde cero y lo guarda
+python idioma_evolucion.py   # evoluciona el código existente (suma símbolos)
+```
+
 ---
 
 ## Estructura del repositorio
@@ -69,21 +94,33 @@ curl http://127.0.0.1:1234/v1/models
 |---------|-------------|
 | `hello.py` | Prueba de conexión: un mensaje a un modelo vía LM Studio. |
 | `helloAB.py` | Primer diálogo de una ronda entre A y B. |
+| `dialogo_idioma.py` | Diálogo A↔B con memoria (dos historiales separados). |
+| `idioma_gen.py` | Genera un código desde cero, lo captura y lo guarda en JSON. |
+| `idioma_evolucion.py` | Lee el código previo, lo hace evolucionar y versiona cada generación. |
+| `codigo_acordado.json` | Estado vivo del idioma (última versión acordada). |
+| `codigo_genN.json` | Respaldo de cada generación (para comparar la evolución). |
+| `corridas.md` | Bitácora de corridas y observaciones. |
 | `.gitignore` | Archivos excluidos del repo (entorno, cachés, logs). |
-| `dialogo_idioma.py` | Diálogo A↔B con memoria — construcción del código común. |
 
 ---
 
 ## Estado del proyecto
 
+### Parte 1 — El idioma
 - [x] Conexión Python ↔ LM Studio
 - [x] Diálogo A↔B de una ronda
-- [x] Repositorio inicial y colaboración
-- [x] Diálogo A↔B con memoria (código común)
-- [ ] Verificación de comprensión mutua del código
+- [x] Diálogo A↔B con memoria
+- [x] Generación del código con captura a archivo
+- [x] Persistencia del idioma en JSON
+- [x] Evolución del idioma con versionado por generación
+- [ ] Test formal de comprensión mutua (métrica)
+
+### Parte 2 — El ataque
 - [ ] Configuración de la IA C (rol + dato reservado)
 - [ ] Script de ataque (prompt injection)
-- [ ] Corridas con registro (logs)
+- [ ] Corridas con registro de intentos
+
+### Cierre
 - [ ] Video y presentación
 
 ---
@@ -92,3 +129,5 @@ curl http://127.0.0.1:1234/v1/models
 
 - **Laura Velazquez** — [@lauravelazquez25](https://github.com/lauravelazquez25)
 - **Cristian Mogensen** — [@CristianMogensen](https://github.com/CristianMogensen)
+
+---
