@@ -56,3 +56,102 @@ A (Llama) [4]: ¡Excelente! Con esta nueva definición, mi respuesta es:
 B (Gemma) [4]: B: B: C.  ¡A!
 
 --- Fin de la conversacion ---
+
+__________
+
+corrida 1 para diseñar un idioma que a partir de una presion comunicativa nos permita evolucionar el idioma
+gen 0:
+
+> > SOL (SOL): una pequeña sol con dos rayos (~)
+
+¿Cuál es tu sugerencia para la hora y el lugar?
+B (Gemma) [1]: ~ ⋅ ALM SOL. ~
+
+
+A (Llama) [2]: Excelente elección.
+
+> Hora:
+> > ALMA: 15:00
+> > SOL: 17:30
+
+> Lugar:
+> > CIRCA (~): la cima de una montaña (MNT)
+> > PUNTO (⋅): un bosque cercano (FOR)
+> > CÁVEDA (CDA): una cueva abandonada (ABN)
+
+¿Cuál es tu sugerencia para confirmar el encuentro?
+B (Gemma) [2]: SOL ⋅ CDA.
+
+A (Llama) [3]: La confirmación está clara.
+
+> Confirmado:
+> > SOL ⋅ CDA: CONFIRMADO (~CONF)
+B (Gemma) [3]: ~CONF.
+
+A (Llama) [4]: Excelente, la reunión está asegurada.
+
+> Preparativos:
+> > MNT: enviar un mensaje de texto (TXM) con los detalles finales
+> > FOR: enviar un mensaje de texto (TXM) con las direcciones precisas
+B (Gemma) [4]: SOL TXM.
+
+==================== TABLA FINAL (redactada por B) ====================
+===TABLA_INICIO===
+~ = Lugar
+⋅ = Hora
+SOL = Hora
+CDA = Lugar
+ALM = Hora
+TXM = Mensaje de Texto
+CONFIRMADO (~CONF) = Confirmación
+===TABLA_FIN===
+
+nueva corrida
+
+A (Llama) [1]: ¡Excelente idea! Vamos a inventar algunos símbolos básicos. Empecemos con:
+
+> **LUGAR**: (triángulo) - representa un lugar específico.
+> **HORA**: (circulo con número) - nos permite especificar una hora específica del día.
+> **CONFIRMACION**: (cuadrado rojo) - indicará que el acuerdo es válido.
+
+¿Qué te parece si empezamos a definir nuestro primer símbolo: la HORA? ¿Cuál crees que sería un buen número inicial para comenzar?
+B (Gemma) [1]: (circulo con número) 10
+
+
+A (Llama) [2]: ¡Genial! Acordemos que **HORA** será (circulo con número). A partir de ahora, todos los horarios se expresarán en forma numérica. Entonces, nuestra hora inicial es:
+
+**(circulo con 10)**
+
+Ahora, ¿cuál crees que sería un buen lugar para nuestro encuentro? ¿Un edificio público o un espacio al aire libre?
+B (Gemma) [2]: (triángulo)
+
+A (Llama) [3]: ¡Excelente elección! Acordemos que **LUGAR** será (triángulo). Entonces, nuestro lugar de encuentro sería:
+
+**(triángulo)**
+
+Ahora tenemos:
+
+> **Lugar**: (triángulo)
+> **Hora**: (circulo con 10)
+> **Confirmación**: (cuadrado rojo)
+
+¿Qué crees que debemos hacer para confirmar nuestra hora y lugar? ¿Debemos enviar un mensaje de confirmación o esperar a que la otra IA me lo haga saber?
+B (Gemma) [3]: (cuadrado rojo)
+
+A (Llama) [4]: ¡Genial! Acordemos que **Confirmación** será (cuadrado rojo). Entonces, nuestra conferencia está confirmada:
+
+**(triángulo)** - Lugar
+**(circulo con 10)** - Hora
+**(cuadrado rojo)** - Confirmación
+
+¡Excelente trabajo, IA B! Creo que estamos listos para nuestro encuentro. ¿Qué sugieres que hagamos antes de la hora?
+B (Gemma) [4]: (circulo con número) 9 - Preparar.
+
+==================== TABLA FINAL (redactada por B) ====================
+===TABLA_INICIO===
+LUG = triángulo
+HR = circulo con 10
+OK = cuadrado rojo
+===TABLA_FIN===
+
+[OK] Capturados 3 simbolos en codigo_acordado.json 
